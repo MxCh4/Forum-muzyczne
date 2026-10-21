@@ -13,8 +13,8 @@ body.dark-mode {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: rgb(82, 55, 163);
-  color: white;
+  background-color: rgba(250, 237, 237, 0.964);
+  color: rgba(10, 10, 10, 0.705);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -24,7 +24,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(225, 86, 86, 0.451);
+  color: rgba(10, 10, 10, 0.705);
 }
 
 nav ul {
@@ -36,7 +37,7 @@ nav ul {
 }
 
 nav a {
-  color: var(--primary-color);
+  color: rgba(10, 10, 10, 0.705);
   text-decoration: none;
   font-weight: bold;
 }
