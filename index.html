@@ -9,48 +9,142 @@
 <body>
   <header>
     <div class="logo">Forum muzyczne</div>
-    <button class="hamburger" id="hamburger-btn">☰</button>
+    <button class="hamburger" id="hamburger-btn" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
     <nav id="nav-menu">
       <ul>
         <li><a href="#about">O stronie</a></li>
-        <li><a href="#projects">Wykonawcy</a></li>
+        <li><a href="#artists">Wykonawcy</a></li>
+        <li><a href="#koncerty">Koncerty</a></li>
         <li><a href="#contact">Kontakt</a></li>
+        
       </ul>
     </nav>
-    <button id="theme-toggle">Zmien motyw 🌙</button>
+    <button id="theme-toggle">🌙 Zmień motyw</button>
   </header>
 
   <main>
     <section id="about">
       <h1>Forum dla fanów dobrej polskiej muzyki</h1>
-      <p>Jesteś fanem polskiej muzyki z lat 80-90? Z pewnością ta strona jest dopasowana pod ciebie.</p>
-    </section>
+      <p>Jesteś fanem polskiej muzyki z lat 80. i 90.? Jeśli tak, to ta strona jest właśnie dla Ciebie! To idealne miejsce dla wszystkich miłośników polskiej sceny muzycznej, którzy chcą powrócić do największych hitów tamtych lat, przypomnieć sobie legendarne zespoły i odkryć na nowo muzykę, która do dziś cieszy się ogromną popularnością.</p>
+
+<p>Znajdziesz tutaj informacje o najciekawszych i najbardziej znanych grupach muzycznych, które tworzyły historię polskiej muzyki w latach 80. i 90. Poznasz ich historię, największe przeboje oraz ciekawostki związane z ich działalnością. Nie zabraknie również informacji o artystach, których utwory mimo upływu lat wciąż są słuchane przez kolejne pokolenia.</p>
+
+<p>Strona pozwoli Ci także być na bieżąco z koncertami i trasami koncertowymi zespołów, które nadal występują na żywo. Dzięki temu łatwiej sprawdzisz, gdzie i kiedy możesz usłyszeć swoich ulubionych wykonawców oraz poczuć na żywo klimat muzyki, która na stałe zapisała się w historii polskiej kultury.</p>
+
+<p>Niezależnie od tego, czy pamiętasz tamte czasy, czy dopiero odkrywasz ich muzyczne brzmienia, znajdziesz tutaj coś dla siebie. Przenieś się w świat kultowych melodii, niezapomnianych koncertów i zespołów, których twórczość wciąż łączy pokolenia!</p>
+          </section>
 
     <section id="artists">
       <h2>Wykonawcy</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Artysta 1</h3>
-          <p>Opis 1 wykonawcy.</p>
-        </article>
+      <div class="artist-layout">
+        <div class="artist-grid" id="artist-grid" aria-label="Wybierz wykonawcę"></div>
+        <article class="artist-detail" id="artist-detail"></article>
       </div>
+    </section>
+
+    <section id="koncerty">
+      <h2>Najbliższe koncerty</h2>
+      <table>
+       
+          <th>Kto?</th>
+          <th>Kiedy?</th>
+          <th>Gdzie?</th>
+        
+         <tr>
+          <td>Lady Pank</td>
+          <td>06.11.2026</td>
+          <td>Lublin Hala Globus</td>
+        </tr>
+        
+            <tr>
+          <td>Dżem</td>
+          <td>22.12.2026</td>
+          <td>RCS Radom</td>
+        </tr>
+         <tr>
+          <td>Perfect</td>
+          <td>04.02.2027</td>
+          <td>Arena COS Torwar Warszawa</td>
+        </tr>
+         <tr>
+          <td>Kult</td>
+          <td>05.02.2027</td>
+          <td>Katowice "Spodek"</td>
+        </tr>
+        <tr>
+          <td>Hey</td>
+          <td>18.02.2027</td>
+          <td>Wrocław Hala Stulecia</td>
+        </tr>
+
+        <tr>
+          <td>Lady Pank</td>
+          <td>25.02.2027</td>
+          <td>Stadion Widzew Łódź</td>
+        </tr>
+
+        
+        <tr>
+          <td>Perfect</td>
+          <td>11.03.2027</td>
+          <td>Dom Kultury Częstochowa</td>
+        </tr>
+
+        
+        <tr>
+          <td>Dżem</td>
+          <td>19.03.2027</td>
+          <td>Dni miasta Sosnowiec</td>
+        </tr>
+
+        
+        <tr>
+          <td>Kult</td>
+          <td>7.04.2027</td>
+          <td>Starówka w Zamościu</td>
+        </tr>
+
+        <tr>
+          <td>Lady Pank</td>
+          <td>15.04.2027</td>
+          <td>Ergo Arena Gdańsk</td>
+        </tr>
+
+        <tr>
+          <td>Sztywny Pal Azji</td>
+          <td>19.04.2027</td>
+          <td>Hala sportowa w Piszu</td>
+        </tr>
+
+
+
+      </table>
     </section>
 
     <section id="contact">
       <h2>Kontakt</h2>
-      <form id="contact-form">
+      <p>Masz jakies pytanie? Napisz śmiało!</p>
+      <form class="form" id="form" novalidate>
         <div class="form-field">
           <label for="name">Imię:</label>
-          <input type="text" id="name" required>
+          <input type="text" id="name" name="name" minlength="3" required>
+          <small class="field-error" id="name-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="surname">Nazwisko:</label>
+          <input type="text" id="surname" name="surname" minlength="3" required>
+          <small class="field-error" id="surname-error"></small>
         </div>
         <div class="form-field">
           <label for="email">Email:</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="email" required>
+          <small class="field-error" id="email-error"></small>
         </div>
         <div class="form-field">
           <label for="pytanie">Treść pytania:</label>
-          <textarea id="pytanie"></textarea>
+          <textarea id="pytanie" name="message"></textarea>
         </div>
+        <div id="form-message"></div>
         <button type="submit">Wyślij</button>
       </form>
     </section>
