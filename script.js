@@ -120,7 +120,7 @@ const artists = [
     genre: 'Rock',
     description: 'Zespół zawiązał się w Trzebini w połowie lat 80. i błyskawicznie stał się gwiazdą festiwalu w Jarocinie. Ich piosenki idealnie oddawały nastroje młodych ludzi dorastających w szarych realiach schyłkowego PRL-u. Kawałki takie jak "Nie płać Ewo" na stałe weszły do kanonu polskiego rocka.Ciekawostka: Sama nazwa zespołu wzięła się z luźnej rozmowy założycieli i miała być tylko żartem, ale tak bardzo zapadła wszystkim w pamięć, że została z nimi na stałe.',
     image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Sztywny_Pal_Azji_Rockowizna_2022_Gda%C5%84sk_28.jpg/1280px-Sztywny_Pal_Azji_Rockowizna_2022_Gda%C5%84sk_28.jpg?utm_source=pl.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail',
-    imageSource: '"https://commons.wikimedia.org/wiki/User:Wojciech_P%C4%99dzich',
+    imageSource: 'https://commons.wikimedia.org/wiki/User:Wojciech_P%C4%99dzich',
     credit: 'Wojciech Pędzik'
   }
   ];
@@ -247,3 +247,32 @@ if (form) {
 artists.forEach((artist) => artistGrid.append(createArtistCard(artist)));
 window.addEventListener('hashchange', renderArtistView);
 renderArtistView();
+
+function pokazZegar() {
+    const teraz = new Date();
+    
+    let dzien = teraz.getDate();
+    let miesiac = teraz.getMonth() + 1;
+    let rok = teraz.getFullYear();
+    let godziny = teraz.getHours();
+    let minuty = teraz.getMinutes();
+    let sekundy = teraz.getSeconds();
+
+    
+    dzien = dzien < 10 ? "0" + dzien : dzien;
+    miesiac = miesiac < 10 ? "0" + miesiac : miesiac;
+    godziny = godziny < 10 ? "0" + godziny : godziny;
+    minuty = minuty < 10 ? "0" + minuty : minuty;
+    sekundy = sekundy < 10 ? "0" + sekundy : sekundy;
+
+    
+
+    const aktualnyCzas = `${dzien}.${miesiac}.${rok} ${godziny}:${minuty}:${sekundy}`;
+    document.getElementById("zegar").innerText = aktualnyCzas;
+}
+
+// Uruchomienie funkcji co 1 sekundę (1000 ms)
+setInterval(pokazZegar, 1000);
+
+// Wywołanie od razu po załadowaniu strony, aby uniknąć 1-sekundowego opóźnienia
+pokazZegar();
