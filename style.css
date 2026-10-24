@@ -1,31 +1,108 @@
-:root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --primary-color: #0066cc;
-}
-
-body.dark-mode {
-  --bg-color: #1a1a1a;
-  --text-color: #f0f0f0;
-  --primary-color: #4da6ff;
-}
 
 body {
   margin: 0;
+  scroll-behavior: smooth;
   font-family: Arial, sans-serif;
-  background-color: rgba(250, 237, 237, 0.964);
+  background-color: rgba(249, 246, 246, 0.964);
   color: rgba(10, 10, 10, 0.705);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transition: background-color 0.3s, color 0.3s;
+   transition: 0.5s;
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(225, 86, 86, 0.451);
+  background-color: rgba(113, 43, 226, 0.849);
   color: rgba(10, 10, 10, 0.705);
+}
+
+main section {
+  scroll-margin-top: 6rem;
+}
+
+footer {
+  margin-top: 20%;
+}
+
+.artist-layout {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 1.5rem;
+  
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  
+}
+
+.artist-card {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  margin: 20px;
+
+}
+
+.artist-card:hover,
+.artist-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.artist-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.artist-detail {
+  min-height: 220px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  margin: 20px;
+   transition: 0.5s;
+  
+}
+
+.artist-detail h3 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.artist-detail p {
+  font-size: 20px;
+}
+
+.artist-credit {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.artist-credit a {
+  color: #0055aa;
 }
 
 nav ul {
@@ -74,14 +151,110 @@ main {
   width: 50%;
 }
 
+.field-error {
+  display: block;
+  margin: 0 5px;
+  color: #b00020;
+}
+
+.is-invalid {
+  border: 2px solid #b00020;
+}
+
+#form-message {
+  margin: 0.75rem 5px;
+}
+
 .form-field textarea {
   resize: vertical;
 }
 
+table {
+  width: 100%;
+  border: solid rgba(10, 10, 10, 0.705);
+}
+
+table td {
+  text-align: center;
+   border-top: solid rgba(10, 10, 10, 0.705);
+   font-size: 20px;
+   border-right: solid rgba(10, 10, 10, 0.705);
+   
+}
+
+table td:nth-child(3) {
+  border-right: none;
+}
+
+table th {
+  font-size: 25px;
+}
+
+#about h1{
+  font-size: 45px;
+
+}
+
+#about p {
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+
+#artists h2{
+  font-size: 45px;
+
+}
+
+#koncerty h2{
+  font-size: 45px;
+  margin-top: 25%;
+}
+
+#contact h2{
+  font-size: 45px;
+  margin-top: 25%;
+}
+
+#contact p{
+  font-size: 20px;
+  
+}
+
+.dark {
+  background-color: #222222;
+  color: #f5f5f5;
+  transition: 0.5s;
+}
+.dark table {
+  border-color: #f0f0f0;
+}
+
+.dark table {
+  border-color: #f0f0f0;
+}
+
+.dark table td {
+  border-top: solid rgba(252, 249, 249, 0.705);
+   
+   border-right: solid rgba(243, 240, 240, 0.705);
+}
+
+.dark table td:nth-child(3) {
+  border-right: none;
+}
+
+.dark .artist-detail {
+  background-color: #342d2d;
+   transition: 0.5s;
+}
 
 
 /* Responsywność dla urządzeń mobilnych */
 @media (max-width: 768px) {
+  main section {
+    scroll-margin-top: 11rem;
+  }
+
   .hamburger {
     display: block;
   }
@@ -99,5 +272,20 @@ main {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
+  }
+
+  .artist-layout {
+    grid-template-columns: minmax(110px, 0.7fr) minmax(0, 2fr);
+    gap: 0.75rem;
+  }
+
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-detail {
+    min-height: 180px;
+    padding: 1rem;
+    
   }
 }
