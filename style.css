@@ -22,6 +22,10 @@ header {
   color: rgba(10, 10, 10, 0.705);
 }
 
+.logo {
+  font-size: 20px;
+}
+
 main section {
   scroll-margin-top: 6rem;
 }
@@ -104,6 +108,10 @@ footer {
 .artist-credit a {
   color: #0055aa;
 }
+nav  {
+  font-size: 20px;
+  
+}
 
 nav ul {
   display: flex;
@@ -130,6 +138,7 @@ nav a:hover {
   border: none;
   cursor: pointer;
   color: var(--text-color);
+  transition: 2s;
 }
 
 main {
@@ -255,12 +264,51 @@ table th {
     scroll-margin-top: 11rem;
   }
 
+  header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "logo theme hamburger"
+      "nav nav nav";
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .logo {
+    grid-area: logo;
+    align-self: center;
+    font-size: 1.1rem;
+  }
+
   .hamburger {
+    grid-area: hamburger;
     display: block;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #1a1324;
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  #theme-toggle {
+    grid-area: theme;
+    min-height: 40px;
+    padding: 0.5rem 0.65rem;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: inherit;
+    font: inherit;
+    font-size: 0.85rem;
   }
 
   nav {
     display: none;
+    grid-area: nav;
     width: 100%;
   }
 
@@ -270,8 +318,24 @@ table th {
 
   nav ul {
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background: rgba(35, 19, 58, 0.96);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  nav a {
+    display: block;
+    padding: 0.8rem 0.75rem;
+    border-radius: 6px;
+    color: #fff;
+  }
+
+  nav a:hover,
+  nav a:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
+    text-decoration: none;
   }
 
   .artist-layout {
