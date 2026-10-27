@@ -18,8 +18,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(113, 43, 226, 0.849);
+  background-color: rgb(26, 92, 132);
   color: rgba(10, 10, 10, 0.705);
+}
+
+.dark header {
+  color: #f5f5f5;
+}
+
+.dark #nav-menu a {
+  color: #f5f5f5;
 }
 
 .logo {
@@ -31,8 +39,10 @@ main section {
 }
 
 footer {
-  margin-top: 20%;
+  margin-top: 10%;
 }
+
+
 
 .artist-layout {
   display: grid;
@@ -52,6 +62,8 @@ footer {
 .artist-card {
   display: block;
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   overflow: hidden;
   padding: 0;
   border: 3px solid transparent;
@@ -62,7 +74,7 @@ footer {
   appearance: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  margin: 20px;
+  margin: 0;
 
 }
 
@@ -84,7 +96,8 @@ footer {
   min-height: 220px;
   padding: 1.5rem;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.8);
+  background-color: rgba(119, 204, 240, 0.274);
+  border-radius: 2%;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   margin: 20px;
    transition: 0.5s;
@@ -181,6 +194,7 @@ main {
 table {
   width: 100%;
   border: solid rgba(10, 10, 10, 0.705);
+  padding: 5px;
 }
 
 table td {
@@ -199,33 +213,90 @@ table th {
   font-size: 25px;
 }
 
+#about {
+  background-color: rgba(43, 154, 202, 0.1);
+  border-radius: 2%;
+}
+
+.dark #about {
+  background-color: rgba(62, 47, 43, 0.192);
+  border-radius: 2%;
+}
+
 #about h1{
   font-size: 45px;
+  padding: 5px;
+  margin-left: 2px;
 
 }
 
 #about p {
   font-size: 20px;
   margin-bottom: 5%;
+  padding: 5px;
+}
+
+#artists {
+  background-color: rgba(43, 154, 202, 0.1);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 2%;
+ 
+}
+
+.dark #artists {
+background-color: rgba(62, 47, 43, 0.192);
+
 }
 
 #artists h2{
   font-size: 45px;
+  margin-top: 15%;
+  padding: 5px;
+  margin-left: 5px;
+
+}
+
+#koncerty {
+  background-color: rgba(43, 154, 202, 0.1);
+  border-radius: 2%;
+
+}
+
+.dark #koncerty {
+background-color: rgba(62, 47, 43, 0.192);
 
 }
 
 #koncerty h2{
   font-size: 45px;
-  margin-top: 25%;
+  margin-top: 15%;
+  padding: 5px;
+  
+}
+
+#contact {
+background-color: rgba(43, 154, 202, 0.1);
+  border-radius: 2%;
+  
+}
+
+.dark #contact {
+background-color: rgba(62, 47, 43, 0.192);
+
 }
 
 #contact h2{
   font-size: 45px;
-  margin-top: 25%;
+  margin-top: 15%;
+  padding: 5px;
+  
 }
 
 #contact p{
   font-size: 20px;
+  padding: 5px;
   
 }
 
@@ -261,7 +332,7 @@ table th {
 /* Responsywność dla urządzeń mobilnych */
 @media (max-width: 768px) {
   main section {
-    scroll-margin-top: 11rem;
+    scroll-margin-top: 8rem;
   }
 
   header {
@@ -289,9 +360,15 @@ table th {
     border: 1px solid rgba(10, 10, 10, 0.25);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.2);
-    color: #1a1324;
+    color: #0c2b3d;
     font-size: 1.75rem;
     line-height: 1;
+  }
+
+  .dark .hamburger {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    color: #f5f5f5;
   }
 
   #theme-toggle {
@@ -321,15 +398,23 @@ table th {
     gap: 0.25rem;
     padding: 0.5rem;
     border-radius: 10px;
-    background: rgba(35, 19, 58, 0.96);
+    background: #fff;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  .dark nav ul {
+    background: #0c2b3d;
   }
 
   nav a {
     display: block;
     padding: 0.8rem 0.75rem;
     border-radius: 6px;
-    color: #fff;
+    color: #0c2b3d;
+  }
+
+  .dark nav a {
+    color: #f5f5f5;
   }
 
   nav a:hover,
@@ -339,17 +424,80 @@ table th {
   }
 
   .artist-layout {
-    grid-template-columns: minmax(110px, 0.7fr) minmax(0, 2fr);
-    gap: 0.75rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
   }
 
   .artist-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .artist-detail {
-    min-height: 180px;
+    min-width: 0;
+    min-height: 0;
     padding: 1rem;
-    
+    margin: 0;
+  }
+
+  #about h1,
+  #artists h2,
+  #koncerty h2,
+  #contact h2 {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    margin-top: 1rem;
+  }
+
+  #about p,
+  #contact p,
+  .artist-detail p {
+    font-size: 1rem;
+  }
+
+  .artist-detail h3 {
+    font-size: 1.5rem;
+  }
+
+  #koncerty {
+    overflow-x: auto;
+  }
+
+  #koncerty table {
+    min-width: 100%;
+    width: max-content;
+  }
+
+  #koncerty th {
+    font-size: 1.1rem;
+  }
+
+  #koncerty td {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "logo hamburger"
+      "theme theme"
+      "nav nav";
+  }
+
+  #theme-toggle {
+    justify-self: end;
+  }
+
+  .artist-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
