@@ -1,4 +1,3 @@
-// 1. Funkcjonalność JS: Rozwijane menu mobilne
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const navMenu = document.getElementById('nav-menu');
 
@@ -18,7 +17,6 @@ navMenu.querySelectorAll('a').forEach((link) => {
   });
 });
 
-
 const themeToggleBtn = document.getElementById('theme-toggle');
 
 themeToggleBtn.addEventListener('click', () => {
@@ -30,7 +28,6 @@ themeToggleBtn.addEventListener('click', () => {
     themeToggleBtn.textContent = '🌙 Zmień motyw';
   }
 });
-
 
 const artists = [
   {
@@ -187,7 +184,6 @@ function renderArtistView() {
   }
 }
 
-
 const form = document.getElementById('form');
 
 if (form) {
@@ -243,7 +239,6 @@ if (form) {
   });
 }
 
-
 artists.forEach((artist) => artistGrid.append(createArtistCard(artist)));
 window.addEventListener('hashchange', renderArtistView);
 renderArtistView();
@@ -257,22 +252,14 @@ function pokazZegar() {
     let godziny = teraz.getHours();
     let minuty = teraz.getMinutes();
     let sekundy = teraz.getSeconds();
-
-    
     dzien = dzien < 10 ? "0" + dzien : dzien;
     miesiac = miesiac < 10 ? "0" + miesiac : miesiac;
     godziny = godziny < 10 ? "0" + godziny : godziny;
     minuty = minuty < 10 ? "0" + minuty : minuty;
     sekundy = sekundy < 10 ? "0" + sekundy : sekundy;
 
-    
-
     const aktualnyCzas = `${dzien}.${miesiac}.${rok} ${godziny}:${minuty}:${sekundy}`;
     document.getElementById("zegar").innerText = aktualnyCzas;
 }
-
-// Uruchomienie funkcji co 1 sekundę (1000 ms)
 setInterval(pokazZegar, 1000);
-
-// Wywołanie od razu po załadowaniu strony, aby uniknąć 1-sekundowego opóźnienia
 pokazZegar();
