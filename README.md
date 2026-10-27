@@ -12,5 +12,6 @@ Projekt statycznej, responsywnej strony internetowej stworzonej w ramach zadania
 - Zmiana trybu na ciemny        
 - wyświetlanie informacji o artystach
 - obsługa walidacji formularza
+- funkcja zegara wyświetlająca aktualną datę i czas
 
 ## Link do opublikowanej strony
