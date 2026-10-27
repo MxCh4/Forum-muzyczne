@@ -94,10 +94,10 @@ const artists = [
     credit: 'Kasia (dłuuuuugie nazwisko):):):) — CC BY 2.0'
   },
   {
-    id: 'banda-i-wanda',
-    name: "Banda i Wanda",
+    id: 'wanda-i-banda',
+    name: "Wanda i Banda",
     genre: "Rock",
-    description: "Banda i Wanda to projekt muzyczny, który Wanda Kwietniewska powołała do życia w 1982 roku po odejściu z grupy Maanam. Utwory takie jak Hi-Fi czy Nie doczekanie twoje stały się hitami dyskotek i radiowych list przebojów. Wanda była jedną z nielicznych kobiet w tamtym okresie, które twardo rządziły męskim zespołem i same w pełni odpowiadały za kierunek artystyczny oraz wizerunek grupy.",
+    description: "Wanda i Banda to projekt muzyczny, który Wanda Kwietniewska powołała do życia w 1982 roku po odejściu z grupy Maanam. Utwory takie jak Hi-Fi czy Nie doczekanie twoje stały się hitami dyskotek i radiowych list przebojów. Wanda była jedną z nielicznych kobiet w tamtym okresie, które twardo rządziły męskim zespołem i same w pełni odpowiadały za kierunek artystyczny oraz wizerunek grupy.",
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Wanda_i_Banda%2C_Zadzwo%C5%84cie_po_milicj%C4%99%2C_Polsat_Plus_Arena_Gdynia_25.01.2025_10.jpg/1280px-Wanda_i_Banda%2C_Zadzwo%C5%84cie_po_milicj%C4%99%2C_Polsat_Plus_Arena_Gdynia_25.01.2025_10.jpg?utm_source=pl.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     imageSource: "https://commons.wikimedia.org/wiki/User:Wojciech_P%C4%99dzich", 
     credit: "Wojciech Pędzik"
