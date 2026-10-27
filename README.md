@@ -15,3 +15,4 @@ Projekt statycznej, responsywnej strony internetowej stworzonej w ramach zadania
 - funkcja zegara wyświetlająca aktualną datę i czas
 
 ## Link do opublikowanej strony
+https://mxch4.github.io/Forum-muzyczne/#about
