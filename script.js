@@ -34,7 +34,7 @@ const artists = [
     id: 'lady-pank',
     name: 'Lady Pank',
     genre: 'Rock',
-    description: 'Lady Pank to zespół założony w Warszawie w 1981 roku przez gitarzystę Jana Borysewicza i autora tekstów Andrzeja Mogielnickiego. Ich piosenki takie jak Mniej niż zero czy Kryzysowa narzeczona natychmiast trafiły na szczyty list przebojów i stały się głosem ówczesnej młodzieży. Nazwa zespołu powstała przypadkowo z błędu redakcyjnego w gazecie, która zapowiadała koncert grupy pod nazwą Mała Lady Punk.',
+    description: 'Lady Pank to zespół założony we Wrocławiu w 1981 roku przez gitarzystę Jana Borysewicza i autora tekstów Andrzeja Mogielnickiego. Ich piosenki takie jak Mniej niż zero czy Kryzysowa narzeczona natychmiast trafiły na szczyty list przebojów i stały się głosem ówczesnej młodzieży. Nazwa zespołu powstała przypadkowo z błędu redakcyjnego w gazecie, która zapowiadała koncert grupy pod nazwą Mała Lady Punk.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Lady_Pank_2007.jpg',
     imageSource: 'https://commons.wikimedia.org/wiki/File:Lady_Pank_2007.jpg',
     credit: 'Bartek Banachowski — CC BY 3.0'
